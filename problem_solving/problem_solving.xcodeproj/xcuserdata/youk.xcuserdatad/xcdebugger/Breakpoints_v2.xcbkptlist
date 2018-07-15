@@ -25,12 +25,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "problem_solving/sw_problem/&#x110e;&#x116c;&#x1103;&#x1162; &#x1109;&#x1165;&#x11bc;&#x110c;&#x1165;&#x11a8;&#x1111;&#x116d; &#x1106;&#x1161;&#x11ab;&#x1103;&#x1173;&#x11af;&#x1100;&#x1175;.cpp"
-            timestampString = "552405196.602948"
+            filePath = "problem_solving/Tip&amp;Trick/SegmentTree.cpp"
+            timestampString = "553238820.8292511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "main(void)"
             landmarkType = "9">
          </BreakpointContent>
@@ -41,12 +41,28 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "problem_solving/sw_problem/&#x110e;&#x116c;&#x1103;&#x1162; &#x1109;&#x1165;&#x11bc;&#x110c;&#x1165;&#x11a8;&#x1111;&#x116d; &#x1106;&#x1161;&#x11ab;&#x1103;&#x1173;&#x11af;&#x1100;&#x1175;.cpp"
-            timestampString = "552405196.603304"
+            filePath = "problem_solving/Tip&amp;Trick/SegmentTree.cpp"
+            timestampString = "553238820.829634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getSum(int idx, int l, int r, int s, int e)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "problem_solving/Tip&amp;Trick/SegmentTree.cpp"
+            timestampString = "553238820.8298481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "main(void)"
             landmarkType = "9">
          </BreakpointContent>
