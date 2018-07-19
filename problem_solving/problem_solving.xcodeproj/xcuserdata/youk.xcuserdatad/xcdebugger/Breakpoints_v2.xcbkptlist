@@ -25,46 +25,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "problem_solving/Tip&amp;Trick/SegmentTree.cpp"
-            timestampString = "553238820.8292511"
+            filePath = "problem_solving/sw_problem/&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp"
+            timestampString = "553622723.113391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "main(void)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "problem_solving/Tip&amp;Trick/SegmentTree.cpp"
-            timestampString = "553238820.829634"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "getSum(int idx, int l, int r, int s, int e)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "problem_solving/Tip&amp;Trick/SegmentTree.cpp"
-            timestampString = "553238820.8298481"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "main(void)"
-            landmarkType = "9">
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

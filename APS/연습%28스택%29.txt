@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int stack[100];
+int top = -1;               
+
+void main(void)
+{
+	stack[++top] = 1;
+	stack[++top] = 2;
+	stack[++top] = 3;
+	printf("%d, ", stack[top--]);
+	printf("%d, ", stack[top--]);
+	printf("%d\n", stack[top--]);
+}

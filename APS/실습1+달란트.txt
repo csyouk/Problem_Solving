@@ -1,0 +1,141 @@
+//
+///////////////////////////////////
+////// 달란트
+////////////////////////////////////
+#include<iostream>
+#include <time.h>
+using namespace std;
+
+int T, Num, P; // 10을 3등분 할 경우 Num = 10, P = 3
+long long ans;
+int a[100];  // 10을 3등분할 경우 ex) {1, 1, 8}이 저장 될 수 있다.
+
+void solve(int num, int p)
+{
+ if (p == 1)
+ {
+  long long t = 1;
+  a[p] = num;
+
+  for (int i = 1; i <= P; i++) t *= a[i];
+
+  if (t > ans) ans = t;
+ }
+ else 
+ {
+  //for (int i = 1; i <= num - p + 1; i++)
+  for (int i = a[p+1]; i <= num - p + 1; i++)
+  {
+   //if ( (num - i)/(p - 1) < i) continue;  
+   a[p] = i;
+   solve(num - i, p - 1);
+  }
+ }
+}
+
+int main()
+{
+ clock_t before = clock();
+ cin >> T;
+
+ for (int tc = 1; tc <= 10; tc++)
+ {
+  ans = 0;
+
+  cin >> Num >> P;
+
+  solve(Num, P);
+
+  cout << "#" << tc << " " << ans << endl;
+ }
+ printf("걸린시간은 %5.2f 입니다.\n", (double)(clock() - before) / CLOCKS_PER_SEC);
+ return 0;
+}
+
+
+
+
+
+//
+//#include<iostream>
+//#include <time.h>
+//using namespace std;
+//
+//int T, Num, P; // 10을 3등분 할 경우 Num = 10, P = 3
+//long long memo[100][33];
+//
+//long long solve(int num, int p)
+//{
+// if (memo[num][p]) return memo[num][p];
+//
+// long long tmax = 0;
+//
+// if (p == 1) return num;
+// else
+// {
+//  for (int i = 1; i <= num - p + 1; i++)
+//  {
+//   long long t = i * solve(num - i, p - 1);
+//   if (tmax < t) tmax = t;
+//  }
+// }
+// return memo[num][p] = tmax;
+//}
+//
+//int main()
+//{
+// clock_t before = clock();
+// cin >> T;
+//
+// for (int tc = 1; tc <= 10; tc++)
+// {
+//  cin >> Num >> P;
+//
+//  cout << "#" << tc << " " << solve(Num, P) << endl;
+// }
+//
+// printf("걸린시간은 %5.2f 입니다.\n", (double)(clock() - before) / CLOCKS_PER_SEC);
+// return 0;
+//}
+
+
+
+
+
+//
+//
+//#include <iostream>
+//#include <time.h>
+//using namespace std;
+//
+//int main( )
+//{
+// clock_t before = clock();
+//
+// int T, val, p;
+// long long ans;
+// cin >> T;
+//
+// for (int i = 1; i <= 10; i++)
+// {
+//  cin >> val >> p; // 10 3
+//
+//  ans = 1;
+//
+//  while ( 1 ) 
+//  {
+//   ans *= val / p; 
+//   val -= val / p;
+//
+//   if(--p == 0) break;
+//  }
+//
+//  cout << "#" << i << " " << ans << endl;
+// }
+//
+//
+// printf("걸린시간은 %5.2f 입니다.\n", (double)(clock() - before) / CLOCKS_PER_SEC);
+// return 0;
+//}
+
+

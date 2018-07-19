@@ -1,0 +1,92 @@
+
+//// day5 실습 : 화학물질, 재귀적 DP 
+
+#include <iostream>
+using namespace std;
+
+int matrix[100][100];	// 최초 입력 행렬
+int submatrix[20][2];	// 최초 입력 행렬로부터 서브 행렬을 추출하여 각 서브 행렬의 크기를 저장할 배열
+int M[20][20];			// 행렬 곱을 동적 계획법으로 수행할 배열
+int d[21];				// 2*3, 3*4, 4*5의 3개의 서브 배열에 대해서 d배열은 2, 3, 4, 5를 저장한다.
+int subcnt;				// 서브 행렬의 개수
+int msize;				// 최초 입력 행렬의 크기
+
+void getsubmatrix(int x, int y)
+{
+	int i, j;
+
+	for (i = 0; matrix[x + i][y]; i++)
+	for (j = 0; matrix[x + i][y + j]; j++)
+		matrix[x + i][y + j] = 0;
+
+	submatrix[subcnt][0] = i;
+	submatrix[subcnt][1] = j;
+
+	subcnt++;
+}
+
+int solve(int i, int j)
+{
+	int min = 0x7fffffff;
+	if (M[i][j] >= 0) return M[i][j];
+	for (int k = i; k <= j - 1; k++)
+	{
+		int t = solve(i, k) + solve(k + 1, j) + d[i] * d[k + 1] * d[j + 1];
+		if (min > t) min = t;
+	}
+	return M[i][j] = min;
+}
+
+int main()
+{
+	int N;
+	cin >> N;
+
+	for (int tc = 1; tc <= 10; tc++)
+	{
+		subcnt = 0;
+		cin >> msize;
+		for (int i = 0; i < msize; i++)
+		for (int j = 0; j < msize; j++)
+			cin >> matrix[i][j];
+
+		// 서브 행렬 추출
+		for (int i = 0; i < msize; i++)
+		for (int j = 0; j < msize; j++)
+		if (matrix[i][j])
+			getsubmatrix(i, j);
+
+		// 연쇄 행렬의 시작 찾기
+		int spos;
+		for (spos = 0; spos < subcnt; spos++)
+		{
+			int j;
+			for (j = 0; j < subcnt; j++)
+			if (submatrix[spos][0] == submatrix[j][1])  break;
+
+			if (j == subcnt) break;
+		}
+
+		// 연쇄 행렬로 부터 d값 추출
+		d[0] = submatrix[spos][0];
+
+		for (int c = 0; c < subcnt; c++)
+		for (int i = 0; i < subcnt; i++)
+		if (submatrix[i][0] == d[c])
+		{
+			d[c + 1] = submatrix[i][1];
+			break;
+		}
+
+		// 동적 계획법에 사용할 배열 초기화
+		for (int i = 0; i <subcnt; i++)
+			for (int j = i + 1; j < subcnt; j++)
+				M[i][j] = -1;
+
+		for (int i = 0; i < subcnt; i++)
+			M[i][i] = 0;
+
+		cout << "#" << tc << " " << solve(0, subcnt - 1) << endl;
+	}
+	return 0;
+}

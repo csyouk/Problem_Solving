@@ -1,0 +1,74 @@
+
+//////  최적경로 
+//// ver.4  DP
+
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int D[12][12];
+int dp[11][1 << 10];
+int x[12], y[12];
+int N;
+
+#define ABS(X) (((X) > 0) ? (X) : (X) * -1)
+#define getD(X1, X2, Y1, Y2) (ABS(X1 - X2) + ABS(Y1 - Y2))
+
+
+int solve(int node, int subset)
+{
+	if (subset == 0) // 경유 할 정점이 없는 경우
+		return D[node][N + 1];
+
+	if (dp[node][subset] != 0) return dp[node][subset];
+
+	int ret = 0x7fffffff;
+
+	for (int i = 1; i <= N; i++)
+	{
+		// i번 노드가 부분 집합에 있고 i번 노드로 가는 간선이 있다면
+		if ((subset & (1 << (i - 1))) && D[node][i] != 0)
+		{
+			// i번 노드를 제거한 부분집합에 대하여 i를 시작점으로 재귀
+			int t = D[node][i] + solve(i, subset & ~(1 << (i - 1)));
+			if (t < ret) ret = t;
+		}
+	}
+
+	return dp[node][subset] = ret;
+}
+
+
+int main()
+{
+	clock_t before = clock();
+
+	int T;
+	cin >> T;
+
+	for (int tc = 1; tc <= T; ++tc)
+	{
+		cin >> N;
+
+		cin >> x[0] >> y[0] >> x[N + 1] >> y[N + 1];
+
+		for (int i = 1; i <= N; i++)
+			cin >> x[i] >> y[i];
+
+		for (int i = 0; i < N + 1; i++)
+			for (int j = i + 1; j < N + 2; j++)
+				D[i][j] = D[j][i] = getD(x[i], x[j], y[i], y[j]);
+
+		for (int i = 0; i < N + 2; i++)
+			for (int j = 0; j < (1 << N); j++)
+				dp[i][j] = 0;
+
+		printf("#%d %d\n", tc, solve(0, (1 << N) - 1));
+
+	}
+
+	printf("%.3f\n", (double)(clock() - before) / CLOCKS_PER_SEC);
+	return 0;
+
+}
+

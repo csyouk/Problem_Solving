@@ -1,0 +1,53 @@
+//day3  ÄüÁ¤·Ä
+
+#include <stdio.h>
+
+//int arr[]={11, 45, 23, 81, 23, 34};
+int arr[] = { 11, 45, 22, 81, 23, 34, 99, 22, 17, 8 };
+//int arr[]={1, 1, 1, 1, 1, 0, 0, 0, 0, 0};
+int n = sizeof(arr) / sizeof(arr[0]);
+
+void PrintArray()
+{
+	for (int i = 0; i < n; i++)
+		printf("%3d", arr[i]);
+	printf("\n");
+}
+
+int partition(int arr[], int l, int r)
+{
+	int p = arr[l];
+	int i = l, j = r;
+
+	while (i < j)
+	{
+		while (arr[i] <= p)   if (++i == r) break;
+		while (arr[j] >= p)   if (--j == l) break;
+		if (i < j) {int t = a[i]; a[i] = a[j]; a[j] = t;}
+	}
+
+	int t = a[l]; a[l] = a[j]; a[j] = t;
+	return j;
+}
+
+void quicksort(int arr[], int low, int high)
+{
+	int pivot;
+
+	if (low < high)
+	{
+		pivot = partition(arr, low, high);
+		quicksort(arr, low, pivot - 1);
+		quicksort(arr, pivot + 1, high);
+	}
+}
+
+int main()
+{
+	PrintArray();
+	quicksort(arr, 0, n - 1);
+	PrintArray();
+}
+
+
+

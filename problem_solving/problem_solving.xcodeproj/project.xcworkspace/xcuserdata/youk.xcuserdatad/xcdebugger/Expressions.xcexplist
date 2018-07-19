@@ -10,5 +10,38 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "main:&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "tmp">
+            </PersistentString>
+            <PersistentString
+               value = "node">
+            </PersistentString>
+            <PersistentString
+               value = "len">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DoublyLinkedList::insert(char, int, int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "ptr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DoublyLinkedList::DoublyLinkedList(int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "DoublyLinkedList::find():&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "ptr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

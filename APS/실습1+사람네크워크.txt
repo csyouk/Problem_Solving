@@ -1,0 +1,56 @@
+/////////////////////////////////////
+//// 실습1 사람네크워크
+//////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+int dist[1000][1000];
+
+int main(void)
+{
+	int T, i, j, k;
+	cin >> T;
+
+	for (int tc = 1; tc <= T; ++tc)
+	{
+		int N;
+		int minV = 100000;
+
+		cin >> N;
+
+		for (i = 0; i< N; i++)
+		for (j = 0; j< N; j++)
+		{
+			cin >> dist[i][j];
+			if (i != j && dist[i][j] == 0)
+				dist[i][j] = 100000;
+		}
+
+		for (k = 0; k < N; k++)
+		for (i = 0; i < N; i++)
+		{
+			if (i == k) continue;
+
+			for (j = i + 1; j < N; j++)
+			{
+				if (j == k ) continue;
+				if (dist[i][j] > dist[i][k] + dist[k][j])
+					dist[j][i] = dist[i][j] = dist[i][k] + dist[k][j];
+			}
+		}
+
+		for (i = 0; i < N; i++)
+		{
+			int sum = 0;
+			for (j = 0; j < N; j++)
+				sum += dist[i][j];
+
+			if (sum < minV) minV = sum;
+		}
+
+		cout << "#" << tc << " " << minV << endl;
+	}
+	return 0;
+}
+
+

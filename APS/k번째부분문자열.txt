@@ -1,0 +1,99 @@
+//
+////// day6 실습2 : k번째 부분문자  
+
+#include <iostream>
+using namespace std;
+
+
+char input[1000];
+int sa[1000];
+int lcp[1000];
+
+int strCompare(char *src, char *dst)
+{
+	while (*src)
+	{
+		if (*src != *dst) break;
+		src++;
+		dst++;
+	}
+
+	return (*src - *dst);
+}
+
+
+int strLen(char *p)
+{
+	int i = 0;
+	while (p[i]) i++;
+
+	return i;
+}
+
+
+int main(void)
+{
+	int T, kth, slen;
+
+	cin >> T;
+
+	for (int tc = 1; tc <= T; ++tc)
+	{
+		cin >> kth >> input+1;
+
+		slen = strLen(input+1);
+
+		for (int i = 1; i <= slen; i++)
+		{
+			sa[i] = i;
+			lcp[i] = 0;
+		}
+
+		int min, t;
+		for (int i = 1; i < slen; i++)
+		{
+			min = i;
+			for (int j = i + 1; j <= slen; j++)
+			{
+				t = strCompare(input + sa[min], input + sa[j]);
+
+				if (t > 0) min = j;
+			}
+
+			if (min != i)	t = sa[min], sa[min] = sa[i], sa[i] = t;
+		}
+
+
+		for (int i = 2; i <= slen; i++)
+		{
+			int pre = sa[i - 1];
+			int cur = sa[i];
+			int off = 0;
+
+			while (input[pre + off] == input[cur + off]) off++;
+			
+			lcp[i] += off;
+			
+		}
+
+		int pos = 1;
+		while (kth >= 0)
+		{
+			kth -= (slen + 1) - sa[pos] - lcp[pos];
+			pos++;
+		}
+
+		pos--;
+
+		int len = (slen + 1) - sa[pos] + kth;
+
+		pos = sa[pos];
+
+		cout << "#" << tc << " ";
+		for (int off = 0; off < len; off++)
+			cout << input[ pos + off ];
+
+		cout << endl;
+	}
+	return 0;
+}

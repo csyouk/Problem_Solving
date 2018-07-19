@@ -1,0 +1,65 @@
+
+//// day2 ½Ç½À2 : ±ÕÇüÁ¡
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int mCnt;
+int mPos[10];
+int mVal[10];
+double ans[10];
+
+
+double force(int L, int R, double m)
+{
+	double F = 0, D;
+
+	for (int i = L; i <= R; i++)
+	{
+		D = mPos[i] - m;
+		F += mVal[i] / (D * D);
+	}
+
+	return F;
+}
+
+void solve()
+{
+	double Left, Right, mid, fLeft, fRight;
+
+	for (int k = 0; k < mCnt - 1; k++)
+	{
+		Left  = mPos[k];
+		Right = mPos[k + 1];
+		for (int i = 0; i < 100; i++)   ////////////////////////////////////////////////////////
+		{
+			mid = (Left + Right) / 2.0;
+
+			fLeft  = force(0, k, mid);
+			fRight = force(k + 1, mCnt-1, mid);
+
+			(fLeft > fRight) ? (Left = mid) : (Right = mid);
+		}
+		ans[k] = mid;
+	}
+}
+
+int main()
+{
+	int TC;
+	cin >> TC;
+	for (int tc = 1; tc <= 10; tc++)
+	{
+		cin >> mCnt;
+		for (int i = 0; i < mCnt; i++) cin >> mPos[i];
+		for (int i = 0; i < mCnt; i++) cin >> mVal[i];
+
+		solve();
+
+		cout << '#' << tc;
+		for (int i = 0; i < mCnt - 1; i++)
+			printf(" %.10f", ans[i]);
+		cout << endl;
+	}
+	return 0;
+}

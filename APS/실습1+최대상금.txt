@@ -1,0 +1,93 @@
+// day2 실습1 : 최대상금
+
+// 최대상금
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int sol;
+int ns;
+int ii;
+int jj;
+int state[11][720];
+int cnt;
+int t[] = { 1, 10, 100, 1000, 10000, 100000 };
+
+int Swap(int x, int i, int j)
+{
+	ii = ((x / t[ns - i]) % 10);
+	jj = ((x / t[ns - j]) % 10);
+	return x - ii * t[ns - i] - jj * t[ns - j] + ii * t[ns - j] + jj * t[ns - i];
+}
+
+void findmax(int x, int s)
+{
+	cnt++;
+
+	//if (s)
+	//{
+	//	for (int i = 0; i < 720; i++)
+	//	{
+	//		if (state[s][i] == 0)
+	//		{
+	//			state[s][i] = x;
+	//			break;
+	//		}
+	//		else if (state[s][i] == x) return;
+	//	}
+	//}
+
+	if (s == 0)
+	{
+		if (x > sol) sol = x;
+	}
+	else
+	{
+		for (int i = 1; i <= ns - 1; i++)
+			for (int j = i + 1; j <= ns; j++)
+			{
+				ii = ((x / t[ns - i]) % 10);
+				jj = ((x / t[ns - j]) % 10);
+				int xx = x - ii * t[ns - i] - jj * t[ns - j] + ii * t[ns - j] + jj * t[ns - i];
+				findmax(xx, s - 1);
+				//findmax(Swap(x, i, j), s - 1);
+			}
+	}
+}
+
+int main()
+{
+	clock_t before;
+	double  result;
+	before = clock();
+	int n;
+	cin >> n;
+
+	for (int tc = 1; tc <= 10; tc++)
+	{
+		for (int i = 1; i < 11; i++)
+		for (int j = 0; j < 720; j++)
+			state[i][j] = 0;
+
+		int x, s;
+		cin >> x >> s;
+
+		int t = x;
+		ns = 1;
+		while (t /= 10) ns++;
+
+		cnt = sol = 0;
+		findmax(x, s);
+		cout << "#" << tc << " " << sol << " " << cnt << endl;
+		if (tc == 9){
+			result = (double)(clock() - before) / CLOCKS_PER_SEC;
+			printf("걸린시간은 %5.2f 입니다.\n", result);
+		}
+	}
+	result = (double)(clock() - before) / CLOCKS_PER_SEC;
+	printf("걸린시간은 %5.2f 입니다.\n", result);
+	return 0;
+}
+
+
+

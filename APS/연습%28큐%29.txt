@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int queue[100];
+int f = -1, r = -1;
+
+void main(void)
+{
+	queue[++r] = 1;
+	queue[++r] = 2;
+	queue[++r] = 3;
+
+	printf("%d ", queue[++f]);
+	printf("%d ", queue[++f]);
+	printf("%d\n", queue[++f]);
+}

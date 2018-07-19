@@ -1,0 +1,76 @@
+/// 소수 체크하기(에라토스테네스의 체)
+#include <iostream>
+#include <time.h>   
+using namespace std;
+
+bool isPrime[1000 * 1000 + 1];
+int num[1000000];
+int cnt;
+
+bool f_isPrime(int num)
+{
+	if (num == 2) return true;
+	if (num % 2 == 0) return false;
+	for (int i = 3; i*i <= num; i++)
+		if (num % i == 0) return false;
+
+	return true;
+}
+
+void runEratosthenesSieve(int upperBound)
+{
+	for (int i = 2; i <= upperBound; i++) isPrime[i] = true;
+
+	for (int m = 2; m*m <= upperBound; m++)
+	{
+		if (isPrime[m])
+		{
+			for (int k = m * m; k <= upperBound; k += m)
+				isPrime[k] = false;
+		}
+	}
+}
+
+void main()
+{
+	srand(time(NULL));
+	for (int i = 0; i < 1000000; i++) num[i] = rand() % 1000000 + 2;
+
+	clock_t before = clock();
+	runEratosthenesSieve(1000 * 1000);
+	for (int j = 10; j--;)
+		for (int i = 0; i < 1000000; i++)
+		{
+			if (isPrime[num[i]]) cnt++;
+		}
+	printf("걸린시간은 %5.2f 입니다.\n", (double)(clock() - before) / CLOCKS_PER_SEC);
+
+
+	cout << cnt << endl;
+	cnt = 0;
+	before = clock();
+	for (int j = 10; j--;)
+		for (int i = 0; i < 1000000; i++)
+		{
+			int flag = 1;
+			if (num[i] == 2) 
+			{
+			 cnt++; continue;
+			}
+			if (num[i] % 2 == 0) continue;
+			for (int k = 3; k*k <= num[i]; k++)
+			if (num[i] % k == 0)
+			{
+			 flag = 0;
+			 break;
+			}
+
+			if (flag) cnt++;
+			//if (f_isPrime(num[i])) cnt++;
+		}
+	printf("걸린시간은 %5.2f 입니다.\n", (double)(clock() - before) / CLOCKS_PER_SEC);
+	cout << cnt << endl;
+}
+
+
+

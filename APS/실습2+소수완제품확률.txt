@@ -1,0 +1,69 @@
+/////////////////////////////////////
+//// 실습2 소수완제품 검사
+//////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+#define NOFPURN 18
+#define NOFPRIME 7
+
+int prime[NOFPRIME] = { 2, 3, 5, 7, 11, 13, 17 };
+int combM[19][19];
+
+int comb(int n, int r)
+{
+ if (combM[n][r]) return combM[n][r];
+ if (r == 0) return 1;
+ if (n < r)  return 0;
+ return combM[n][r] = (comb(n - 1, r) + comb(n - 1, r - 1));
+}
+
+int comb(int n, int r)
+{
+ if (r == 0) return 1;
+ if (n < r) return 0;
+ return (comb(n - 1, r) + comb(n - 1, r - 1));
+}
+
+double power(double a, int n)
+{
+ double ret = 1;
+ for (int i = 1; i <= n; ++i) ret *= a;
+ return ret;
+}
+
+double master(double pa, int n)
+{
+ return comb(NOFPURN, n) * power(pa, n) * power(1 - pa, NOFPURN - n);
+}
+
+int main()
+{
+ int T;
+ cin >> T;
+
+ for (int tc = 1; tc <= T; ++tc)
+ {
+  double result = 0;
+  double pa = 0, pb = 0;
+  cin >> pa >> pb;
+
+  pa = pa / 100;
+  pb = pb / 100;
+
+  double mpa = 0, mpb = 0;
+
+  for (int i = 0; i < NOFPRIME; ++i)
+  {
+   mpa += master(pa, prime[i]);
+   mpb += master(pb, prime[i]);
+  }
+
+  result = mpa + mpb - mpa * mpb;
+
+  printf("#%d %.6f\n", tc, result);
+ }
+
+ return 0;
+}
+
