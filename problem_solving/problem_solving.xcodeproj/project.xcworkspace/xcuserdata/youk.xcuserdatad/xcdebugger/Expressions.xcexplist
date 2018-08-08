@@ -3,10 +3,106 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "DLL::print():&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "head">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DoublyLinkedList::insert(char, int, int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "ptr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "main:&#x110e;&#x116c;&#x1103;&#x1162; &#x1109;&#x1165;&#x11bc;&#x110c;&#x1165;&#x11a8;&#x1111;&#x116d; &#x1106;&#x1161;&#x11ab;&#x1103;&#x1173;&#x11af;&#x1100;&#x1175;.cpp">
          <PersistentStrings>
             <PersistentString
                value = "N-(K-1)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DLL::insert(char):&#x110f;&#x1175;&#x1105;&#x1169;&#x1100;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "cur">
+            </PersistentString>
+            <PersistentString
+               value = "head">
+            </PersistentString>
+            <PersistentString
+               value = "tail">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DLL::insert(char):&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "cur">
+            </PersistentString>
+            <PersistentString
+               value = "head">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DLL::DLL(int, char*):&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "cur">
+            </PersistentString>
+            <PersistentString
+               value = "tail">
+            </PersistentString>
+            <PersistentString
+               value = "ptr">
+            </PersistentString>
+            <PersistentString
+               value = "head">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DoublyLinkedList::DoublyLinkedList(int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "DLL::left():&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "cur">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DLL::backspace():&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "cur">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "str">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DLL::right():&#x110f;&#x1175;&#x1105;&#x1169;&#x1100;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "cur">
+            </PersistentString>
+            <PersistentString
+               value = "this">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -25,15 +121,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DoublyLinkedList::insert(char, int, int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "ptr">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DoublyLinkedList::DoublyLinkedList(int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+         contextName = "main:&#x110f;&#x1175;&#x1105;&#x1169;&#x1100;&#x1165;.cpp">
       </ContextState>
       <ContextState
          contextName = "DoublyLinkedList::find():&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
