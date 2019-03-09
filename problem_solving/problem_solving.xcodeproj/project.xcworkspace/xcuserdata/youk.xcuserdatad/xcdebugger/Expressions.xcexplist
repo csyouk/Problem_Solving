@@ -3,28 +3,51 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "DLL::print():&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         contextName = "DLL::left():&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
          <PersistentStrings>
+            <PersistentString
+               value = "cur">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "hash_n_chk(char const*, unsigned long long):&#x110c;&#x1165;&#x11ab;&#x1112;&#x116a;&#x1107;&#x1165;&#x11ab;&#x1112;&#x1169;&#x1106;&#x1169;&#x11a8;&#x1105;&#x1169;&#x11a8;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char)c">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "tmp">
+            </PersistentString>
+            <PersistentString
+               value = "node">
+            </PersistentString>
+            <PersistentString
+               value = "len">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DLL::insert(char):&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "cur">
+            </PersistentString>
             <PersistentString
                value = "head">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DoublyLinkedList::insert(char, int, int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "ptr">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "main:1927.cpp">
       </ContextState>
       <ContextState
-         contextName = "main:&#x110e;&#x116c;&#x1103;&#x1162; &#x1109;&#x1165;&#x11bc;&#x110c;&#x1165;&#x11a8;&#x1111;&#x116d; &#x1106;&#x1161;&#x11ab;&#x1103;&#x1173;&#x11af;&#x1100;&#x1175;.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "N-(K-1)">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "main:&#x110c;&#x1165;&#x11ab;&#x1112;&#x116a;&#x1107;&#x1165;&#x11ab;&#x1112;&#x1169;&#x1106;&#x1169;&#x11a8;&#x1105;&#x1169;&#x11a8;.cpp">
       </ContextState>
       <ContextState
          contextName = "DLL::insert(char):&#x110f;&#x1175;&#x1105;&#x1169;&#x1100;&#x1165;.cpp">
@@ -41,15 +64,144 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DLL::insert(char):&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         contextName = "main:&#x110f;&#x1175;&#x1105;&#x1169;&#x1100;&#x1165;.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "solve():2948.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "hash_table[key].next">
+            </PersistentString>
+            <PersistentString
+               value = "pool[pool_idx].str">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "insert(long long):1927.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "main:&#x1107;&#x1161;&#x11ab;&#x1107;&#x1169;&#x11a8;&#x1107;&#x116e;&#x1107;&#x116e;&#x11ab;&#x1106;&#x116e;&#x11ab;&#x110c;&#x1161;&#x110b;&#x1167;&#x11af;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "hash_table[key].next">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:1605.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "hash_table[key]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "heapify(int):1927.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "h[right]">
+            </PersistentString>
+            <PersistentString
+               value = "h[left]">
+            </PersistentString>
+            <PersistentString
+               value = "h[idx]">
+            </PersistentString>
+            <PersistentString
+               value = "h[large]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "insert(int):1927.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "strCmp(char*, char*):2948.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "*a">
+            </PersistentString>
+            <PersistentString
+               value = "*b">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DoublyLinkedList::insert(char, int, int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "ptr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:&#x1109;&#x116e;&#x110e;&#x1161;&#x11bd;&#x1100;&#x1175;.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "DLL::print():&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "head">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DLL::right():&#x110f;&#x1175;&#x1105;&#x1169;&#x1100;&#x1165;.cpp">
          <PersistentStrings>
             <PersistentString
                value = "cur">
             </PersistentString>
             <PersistentString
-               value = "head">
+               value = "this">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "insert(unsigned long long):&#x1109;&#x116e;&#x110e;&#x1161;&#x11bd;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "hash_table[key]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DLL::backspace():&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "cur">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:&#x110e;&#x116c;&#x1103;&#x1162; &#x1109;&#x1165;&#x11bc;&#x110c;&#x1165;&#x11a8;&#x1111;&#x116d; &#x1106;&#x1161;&#x11ab;&#x1103;&#x1173;&#x11af;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "N-(K-1)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "insert(unsigned long):&#x1109;&#x116e;&#x110e;&#x1161;&#x11bd;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "hash_table[key]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DoublyLinkedList::DoublyLinkedList(int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "DoublyLinkedList::find():&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "ptr">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "del(node*):heap.cpp">
       </ContextState>
       <ContextState
          contextName = "DLL::DLL(int, char*):&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
@@ -69,23 +221,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DoublyLinkedList::DoublyLinkedList(int):&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "DLL::left():&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "cur">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DLL::backspace():&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "cur">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "insert(unsigned int):1927.cpp">
       </ContextState>
       <ContextState
          contextName = "main:&#x110b;&#x1166;&#x1103;&#x1175;&#x1110;&#x1165;.cpp">
@@ -96,40 +232,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DLL::right():&#x110f;&#x1175;&#x1105;&#x1169;&#x1100;&#x1165;.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "cur">
-            </PersistentString>
-            <PersistentString
-               value = "this">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "main:&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "tmp">
-            </PersistentString>
-            <PersistentString
-               value = "node">
-            </PersistentString>
-            <PersistentString
-               value = "len">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "main:&#x110f;&#x1175;&#x1105;&#x1169;&#x1100;&#x1165;.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "DoublyLinkedList::find():&#x1112;&#x1173;&#x11bc;&#x1106;&#x1175;&#x11ab;&#x110b;&#x1175;&#x110b;&#x1174; &#x1105;&#x1175;&#x1109;&#x1173;&#x1110;&#x1173; &#x1103;&#x116c;&#x1103;&#x1169;&#x11af;&#x1105;&#x1175;&#x1100;&#x1175;.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "ptr">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "find(int):&#x1109;&#x116e;&#x110e;&#x1161;&#x11bd;&#x1100;&#x1175;.cpp">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
